@@ -1,4 +1,6 @@
 from numpy import prod
+import sys
+
 def factor(n):
   yield 1
   i = 2
@@ -10,14 +12,12 @@ def factor(n):
   if n > 1:
     yield n
 
-def solve():
-  N = 1
-  i = 1
-  while True:
-    factors = [j for j in factor(N)]
-    if len(factors)>500: return N
-    i += 1
-    N += i
-
-if __name__ == '__main__':
-  print solve()
+N = 1
+i = 1
+while True:
+  factors = [j for j in factor(N)]
+  if len(factors)>500:
+    print N
+    sys.exit()
+  i += 1
+  N += i

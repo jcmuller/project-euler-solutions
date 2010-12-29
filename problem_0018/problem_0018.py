@@ -19,5 +19,4 @@ def solve(level=0, index=0):
   return data[level][index] + max(solve(level=level+1, index=index),
                                   solve(level=level+1, index=index+1))
 
-if __name__ == '__main__':
-  print solve()
+print solve()
