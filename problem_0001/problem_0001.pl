@@ -1,5 +1,6 @@
 #!/usr/bin/perl 
-use common::sense;
+use strict;
+use warnings;
 
 sub is_multiple
 {
