@@ -1,13 +1,3 @@
-import sys
-rng = range(11,21)
-i = 20
-while True:
-  done = True
-  for n in rng:
-    if i%n!=0:
-      done = False
-      i += 20
-      break
-  if done:
-    print i
-    sys.exit()
+from fractions import gcd
+def lcm(numbers): return reduce(lambda x, y: (x*y)/gcd(x,y), numbers, 1)
+print lcm(range(1,21))
