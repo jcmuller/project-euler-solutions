@@ -1,0 +1,7 @@
+*.swp
+*.pyc
+*.class
+*.out
+*.exe
+*.hi
+*.o
