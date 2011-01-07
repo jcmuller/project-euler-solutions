@@ -1,21 +1,12 @@
-def primes(n): 
-  if n==2: return [2]
-  elif n<2: return []
-  s=range(3,n+1,2)
-  mroot = n ** 0.5
-  half=(n+1)/2-1
-  i=0
-  m=3
-  while m <= mroot:
-    if s[i]:
-      j=(m*m-3)/2
-      s[j]=0
-      while j<half:
-        s[j]=0
-        j+=m
-    i=i+1
-    m=2*i+3
-  return [2]+[x for x in s if x]
+def primes(n):
+  import numpy
+  sieve = numpy.ones(n/3 + (n%6==2), dtype=numpy.bool)
+  for i in xrange(1,int(n**0.5)/3+1):
+    if sieve[i]:
+      k=3*i+1|1
+      sieve[       k*k/3     ::2*k] = False
+      sieve[k*(k-2*(i&1)+4)/3::2*k] = False
+  return numpy.r_[2,3,((3*numpy.nonzero(sieve)[0][1:]+1)|1)]
 
 def factor(n):
   if n == 1: return [1]
