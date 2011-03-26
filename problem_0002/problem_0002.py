@@ -1,3 +1,5 @@
+#! env python
+
 def F(limit=float('Inf')):
   a=0
   b=1

@@ -1,3 +1,5 @@
+#! env ruby
+
 s=0
 a=0
 b=1

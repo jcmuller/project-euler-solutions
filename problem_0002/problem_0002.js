@@ -1,3 +1,5 @@
+#!env node
+
 var s = 0;
 a = 0;
 b = 1;

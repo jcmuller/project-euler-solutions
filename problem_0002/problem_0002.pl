@@ -24,9 +24,9 @@ while ($fib < $max)
 	if ($fib % 2 == 0)
 	{
 		$total += $fib;
-		printf("fib(%2d) = %d\n", $i, $fib);
+        #printf("fib(%2d) = %d\n", $i, $fib);
 	}
 }
 
-print "Total: $total\n";
+print "$total\n";
 
